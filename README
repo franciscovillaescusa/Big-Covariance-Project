@@ -1,0 +1,17 @@
+Scripts:
+
+1) covariance.py --> script to compute the covariance matrix and the
+   		     derivatives of the observables with respect to 
+		     the cosmological parameters
+
+2) fisher.py ------> script to compute the Fisher matrix of a single
+   	     	     observable or a combination of them. It requires
+		     the having computed the covariance matrix and the
+		     derivatives of the parameters
+
+
+Libraries:
+
+1) BCP_library.py -> python library with different routines needed to
+   		     compute the Fisher matrix for the numerical and
+		     analytic approaches
