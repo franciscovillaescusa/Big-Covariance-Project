@@ -1,4 +1,5 @@
-# This script computes the Fisher matrix of the Pk, HMF, VSF and any combinations of them
+# This script reads the covariance matrix and the derivatives and computes the Fisher
+# matrix for either P(k), HMF and VSF, and any combinations of them
 import numpy as np
 import sys,os
 sys.path.append('/simons/scratch/fvillaescusa/pdf_information/library')
@@ -9,11 +10,10 @@ root      = '/home/fvillaescusa/data/pdf_information/'
 root_der1 = '/home/fvillaescusa/data/pdf_information/derivatives/Pk_m/'
 root_der2 = '/home/fvillaescusa/data/pdf_information/derivatives/voids/'
 ##################################### INPUT ###########################################
-parameters = ['Om', 'Ob', 'h', 'ns', 's8', 'Mnu']
-
-z                = 0
+parameters       = ['Om', 'Ob', 'h', 'ns', 's8', 'Mnu']
 realizations_Cov = 15000  #number of realizations to use for the covariance
 realizations_der = 250    #number of realizations to use for the derivatives
+z                = 0      #redshift
 
 # parameters of the Pk
 kmax  = 0.2 #h/Mpc
